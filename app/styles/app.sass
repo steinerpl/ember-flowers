@@ -1,0 +1,54 @@
+
+@import "ember-bootstrap/bootstrap"
+
+
+h1
+	font-size: 3rem
+	margin-top: 1rem
+	margin-bottom: .5rem
+	font-weight: 300
+
+p
+	text-align: justify
+
+.text-center + p
+	margin-top: 1rem
+
+.navbar-header
+	position: relative
+
+.navbar
+	button
+		position: absolute
+		top: 0.5rem
+		right: 1rem
+
+.gallery
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	justify-content: center
+	align-items: flex-start
+	align-content: flex-start
+
+	img
+		flex-basis: 100%
+		margin: 10px 0
+		height: auto
+
+		@media screen and (min-width: 576px)
+			flex-basis: 45%
+			margin: 10px
+		
+		@media screen and (min-width: 768px)
+			flex-basis: 33.33%
+		
+		@media screen and (min-width: 992px)
+			flex-basis: auto
+			width: 100%
+			max-width: 250px
+		
+footer
+	padding: 1rem 2rem
+	margin-top: 2rem
+	background-color: #e9ecef

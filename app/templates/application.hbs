@@ -1,33 +1,28 @@
-<header class='site-header'>
+{{#bs-navbar as |navbar|}}
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">Company name</a>
+	</div>
+	{{#navbar.content}}
+		{{#navbar.nav as |nav|}}
+			{{#nav.item}}
+				{{#nav.link-to "welcome"}}Home{{/nav.link-to}}
+			{{/nav.item}}
+			{{#nav.item}}
+				{{#nav.link-to "about"}}About{{/nav.link-to}}
+			{{/nav.item}}
+			{{#nav.item}}
+				{{#nav.link-to "flowers"}}Flowers{{/nav.link-to}}
+			{{/nav.item}}
+		{{/navbar.nav}}
+	{{/navbar.content}}
+	{{navbar.toggle}}
+{{/bs-navbar}}
 
-  <div class='branding'>
-    Marci's flowers
-  </div>
 
-  <nav class='site-navigation'>
-    <ul class='menu'>
-      <li>
-        {{#link-to 'welcome'}} {{!-- or 'application' is great --}}
-          <span>Home</span>
-        {{/link-to}}
-      </li>
-      <li>
-        {{#link-to 'about'}}
-          <span>About</span>
-        {{/link-to}}
-      </li>
-      <li>
-        {{#link-to 'flowers'}}
-          <span>Flowers</span>
-        {{/link-to}}
-      </li>
-    </ul>
-  </nav>
 
-</header>
 
-<div class='outlet'>
+<div class='container'>
   {{outlet}}
 </div>
 
-<footer class='site-footer'>I'm the Footer for Marci's Flowers</footer>
+<footer>Footer</footer>
